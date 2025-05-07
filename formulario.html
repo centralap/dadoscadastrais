@@ -1,0 +1,269 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Dados Cadastrais do Monitorado</title>
+  <style>
+    @media print {
+      body {
+        width: 210mm;
+        height: 297mm;
+        margin: 5mm 10mm;
+        position: relative;
+      }
+      #printBtn {
+        display: none;
+      }
+      .footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        font-size: 8px;
+        text-align: center;
+        padding: 5px 0;
+        border-top: 1px solid #000;
+        background: white;
+      }
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      margin: 0 auto;
+      padding: 10px;
+      max-width: 800px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 16px;
+      margin: 10px 0 20px 0;
+      text-transform: uppercase;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-top: 4px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 4px;
+      font-size: 12px;
+      margin-top: 2px;
+      box-sizing: border-box;
+    }
+
+    .manual-box, .manual-line {
+      border: 1px solid #000;
+      margin-top: 4px;
+    }
+
+    .manual-box {
+      height: 80px;
+    }
+
+    .manual-line {
+      height: 24px;
+    }
+
+    .form-row {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+
+    .form-row > div {
+      flex: 1;
+    }
+
+    .form-row .short {
+      flex: 0.5;
+    }
+
+    .form-row .tiny {
+      flex: 0 0 60px;
+    }
+
+    #printBtn {
+      display: block;
+      margin: 20px auto 0;
+      padding: 6px 14px;
+      font-size: 14px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    #printBtn:hover {
+      background-color: #0056b3;
+    }
+
+    .footer {
+      font-size: 8px;
+      text-align: center;
+      margin-top: 10px;
+      padding-top: 5px;
+      border-top: 1px solid #000;
+    }
+
+    .logo-topo {
+      display: block;
+      margin: 0 auto 10px auto;
+      height: 100px;
+    }
+  </style>
+</head>
+<body>
+
+  <img src="logo-pp.png" alt="Logo Polícia Penal" class="logo-topo">
+
+  <h2>DADOS CADASTRAIS DO MONITORADO - SISTEMA AKILES</h2>
+
+  <form>
+
+    <div class="form-row">
+      <div>
+        <label>Nome completo do monitorado:</label>
+        <input type="text" name="nome_completo">
+      </div>
+      <div class="short">
+        <label>Apelido:</label>
+        <input type="text" name="apelido">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div>
+        <label>CPF:</label>
+        <input type="text" name="cpf">
+      </div>
+      <div>
+        <label>RG:</label>
+        <input type="text" name="rg">
+      </div>
+      <div>
+        <label>Sexo:</label>
+        <div class="manual-line"></div>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div>
+        <label>Data de Nascimento:</label>
+        <div class="manual-line"></div>
+      </div>
+      <div>
+        <label>Local de Nascimento:</label>
+        <input type="text" name="local_nascimento">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div>
+        <label>Nome da Mãe:</label>
+        <input type="text" name="nome_mae">
+      </div>
+      <div>
+        <label>Nome do Pai:</label>
+        <input type="text" name="nome_pai">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div>
+        <label>Estado Civil:</label>
+        <input type="text" name="estado_civil">
+      </div>
+      <div>
+        <label>Escolaridade:</label>
+        <input type="text" name="escolaridade">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div>
+        <label>Profissão:</label>
+        <input type="text" name="profissao">
+      </div>
+      <div>
+        <label>Religião:</label>
+        <input type="text" name="religiao">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div>
+        <label>Telefone celular do Monitorado:</label>
+        <input type="tel" name="telefone_monitorado">
+      </div>
+      <div>
+        <label>Outros contatos:</label>
+        <input type="text" name="outros_contatos">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div>
+        <label>Cor dos Olhos:</label>
+        <input type="text" name="cor_olhos">
+      </div>
+      <div>
+        <label>Cor da cútis:</label>
+        <input type="text" name="cor_cutis">
+      </div>
+      <div>
+        <label>Altura (cm):</label>
+        <input type="number" name="altura">
+      </div>
+      <div>
+        <label>Peso (kg):</label>
+        <input type="number" name="peso">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div>
+        <label>Logradouro:</label>
+        <input type="text" name="logradouro">
+      </div>
+      <div class="tiny">
+        <label>Número:</label>
+        <input type="text" name="numero" maxlength="5">
+      </div>
+    </div>
+
+    <label>Bairro:</label>
+    <input type="text" name="bairro">
+
+    <label>Complemento:</label>
+    <input type="text" name="complemento">
+
+    <label>Deficiência física (se houver):</label>
+    <div class="manual-box"></div>
+
+    <label>Cicatrizes (se houver):</label>
+    <div class="manual-box"></div>
+
+    <label>Tatuagens (se houver):</label>
+    <div class="manual-box"></div>
+
+    <label>Outras características físicas e observações adicionais:</label>
+    <div class="manual-box"></div>
+
+  </form>
+
+  <button id="printBtn" onclick="window.print()">Imprimir / Gerar PDF</button>
+
+  <div class="footer">
+    CENTRAL DE MONITORAMENTO ELETRÔNICO – CME<br>
+    Av. Machado de Assis, 372 – Santa Rita, CEP: 68.901-257<br>
+    Telefone (096) 98415-2844
+  </div>
+
+</body>
+</html>
